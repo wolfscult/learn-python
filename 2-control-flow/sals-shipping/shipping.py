@@ -1,42 +1,36 @@
-weight = 4.8
+weight = 41.5
 ground_shiping_premium = 125.00
 
 #ground shipping
-
 def ground_shipping():
   if weight <=2:
-    cost =  weight * 1.50 + 20.00
+    cost =  weight * 1.50 + 20
     return (cost)
-  elif weight >2 or weight <= 6:
-    cost =  weight * 3.00 + 20.00
+  elif weight <= 6:
+    cost =  weight * 3.00 + 20
     return (cost)
-  elif weight > 6 or weight <= 10:
-    cost =  weight * 4.00 + 20.00
-    return (cost)
-  elif weight > 10:
-    cost =  weight * 4.75 + 20.00
+  elif weight <= 10:
+    cost =  weight * 4.00 + 20
     return (cost)
   else:
-    print('Error')
+    cost =  weight * 4.75 + 20.00
+    return (cost)
 
 #Drone shipping
-
 def drone_shipping():
 
   if weight <=2:
-    cost =  weight * 4.50
+    cost =  weight * 4.50 
     return (cost)
-  elif weight >2 or weight <= 6:
+  elif weight <= 6:
     cost =  weight * 9.00
     return (cost)
-  elif weight > 6 or weight <= 10:
+  elif weight <= 10:
     cost =  weight * 12.00
     return (cost)
-  elif weight > 10:
-    cost =  weight * 24.25
-    return (cost)
   else:
-    print('Error')
+    cost =  weight * 14.25
+    return (cost)
 
 #Dispaying
 print("Your ground shipping cost is: " + str(ground_shipping()) + '$')
